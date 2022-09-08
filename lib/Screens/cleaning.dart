@@ -2,7 +2,6 @@ import 'package:college_hub/Screens/laundry.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../widgets/button.dart';
 
 class Cleaning extends StatelessWidget {
   const Cleaning({Key? key}) : super(key: key);
@@ -165,7 +164,7 @@ color: const Color(0xff757575)
                       'Sat',
                       style: Theme.of(context).textTheme.subtitle1!.apply(
                         fontSizeDelta: 5.sp,
-                        color: Color(0xff757575)
+                        color: const Color(0xff757575)
                       ),
                     ),
                     SizedBox(
