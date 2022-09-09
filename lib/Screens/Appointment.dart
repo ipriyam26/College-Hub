@@ -13,13 +13,13 @@ class Appointment extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.transparent,
       appBar: AppBar(
-        leading: Icon(
+        leading: const Icon(
           Icons.arrow_back_ios,
           color: Colors.white,
         ),
         elevation: 0,
         backgroundColor: Colors.transparent,
-        title: Text(
+        title: const Text(
           'Book Appointment',
           style: TextStyle(
             color: Colors.white,
@@ -43,7 +43,7 @@ class Appointment extends StatelessWidget {
                 ),
               ],
             ),
-            Container(
+            SizedBox(
               width: 350.w,
               height: 369.h,
               child: TableCalendar(
@@ -57,7 +57,7 @@ class Appointment extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 14.sp),
-              child: Text(
+              child: const Text(
                 'Enrollment Number',
                 style:
                     TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
@@ -76,7 +76,7 @@ class Appointment extends StatelessWidget {
                   children: [
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 8.sp),
-                      child: Text(
+                      child: const Text(
                         'E20cse384',
                       ),
                     )
@@ -89,7 +89,7 @@ class Appointment extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 14.sp),
-              child: Text(
+              child: const Text(
                 'Select Time',
                 style:
                     TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
@@ -99,7 +99,7 @@ class Appointment extends StatelessWidget {
               padding: EdgeInsets.all(16.sp),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
+                children: const [
                   timming(
                     time: '02:30 PM',
                   ),
@@ -116,7 +116,7 @@ class Appointment extends StatelessWidget {
               padding: EdgeInsets.all(16.sp),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
+                children: const [
                   timming(
                     time: '02:30 PM',
                   ),
@@ -129,7 +129,7 @@ class Appointment extends StatelessWidget {
                 ],
               ),
             ),
-            button(text: 'Submit Request')
+            const button(text: 'Submit Request')
           ],
         ),
       ),

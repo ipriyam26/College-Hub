@@ -16,6 +16,11 @@ class button extends StatelessWidget {
       children: [
         Container(
           width: 314.w,
+          height: 48.h,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(16.sp)),
+            color: const Color(0xFF22A8B9),
+          ),
           child: Center(
             child: Text(
               text,
@@ -24,11 +29,6 @@ class button extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-          ),
-          height: 48.h,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(16.sp)),
-            color: Color(0xFF22A8B9),
           ),
         )
       ],
