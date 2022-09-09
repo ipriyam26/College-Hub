@@ -166,16 +166,13 @@ class Timing extends StatelessWidget {
       height: 47.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(12.sp)),
-        border: Border.all(color: Colors.grey),
+        border: Border.all(color: const Color(0xffE3E3E3)),
       ),
       child: Center(
           child: Text(
         time,
 
-        style: Theme.of(context).textTheme.subtitle1!.apply(
-              fontSizeFactor: 0.9,
-              color: const Color(0xff161616),
-            ),
+        style: Theme.of(context).textTheme.headline6
 
       )),
     );
