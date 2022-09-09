@@ -80,8 +80,10 @@ class Themes {
       //   letterSpacing: 1.5,
       // ),
     ),
+
     backgroundColor: const Color(0xffffffff),
     primaryColor: const Color(0xff002857),
+  dividerColor: Colors.black,
     highlightColor: const Color(0xff99D9D9),
     indicatorColor: const Color(0xff0A5587),
     shadowColor: const Color(0xff333333),
