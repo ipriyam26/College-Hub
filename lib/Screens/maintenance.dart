@@ -57,7 +57,7 @@ class MaintenanceScreen extends StatelessWidget {
                   
                 ]),
               ),
-              const SelectTiming(),
+               SelectTiming(),
             ],
           ),
           Container(
