@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 class Cleaning extends StatelessWidget {
-  const Cleaning({Key? key}) : super(key: key);
-
+ Cleaning({Key? key}) : super(key: key);
+final listTiming = ['02:30 PM','03:30 PM','04:30 PM','05:30 PM','06:30 PM','07:30 PM','08:30 PM',];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,42 +83,12 @@ color: const Color(0xff757575)
               ),
             ],
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
-              timming(
-                time: '02:30 PM',
-              ),
-              timming(
-                time: '03:30 PM',
-              ),
-              timming(
-                time: '04:30 PM',
-              )
-            ],
-          ),
-          SizedBox(
-            height: 12.h,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
-              timming(
-                time: '05:30 PM',
-              ),
-              timming(
-                time: '06:30 PM',
-              ),
-              timming(
-                time: '07:30 PM',
-              )
-            ],
-          ),
-          Padding(
-              padding: EdgeInsets.all(16.sp), child: const timming(time: '08:30 PM')),
-          SizedBox(
-            height: 6.h,
-          ),
+          
+         Wrap(
+          children: [
+            ...listTiming.map((e) => Timing(time: e))
+          ],
+         ), 
 
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -181,8 +151,8 @@ color: const Color(0xff757575)
   }
 }
 
-class timming extends StatelessWidget {
-  const timming({
+class Timing extends StatelessWidget {
+  const Timing({
     super.key,
     required this.time,
   });

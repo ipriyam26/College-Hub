@@ -100,13 +100,13 @@ class Appointment extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const [
-                  timming(
+                  Timing(
                     time: '02:30 PM',
                   ),
-                  timming(
+                  Timing(
                     time: '02:30 PM',
                   ),
-                  timming(
+                  Timing(
                     time: '02:30 PM',
                   )
                 ],
@@ -117,13 +117,13 @@ class Appointment extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const [
-                  timming(
+                  Timing(
                     time: '02:30 PM',
                   ),
-                  timming(
+                  Timing(
                     time: '02:30 PM',
                   ),
-                  timming(
+                  Timing(
                     time: '02:30 PM',
                   ),
                 ],
