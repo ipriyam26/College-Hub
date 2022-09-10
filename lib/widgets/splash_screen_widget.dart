@@ -65,7 +65,7 @@ class SplashScreenWidget extends StatelessWidget {
                           fontSize: 28,
                           fontWeight: FontWeight.bold,
                         ),
-                      ),
+                        ),
                       const SizedBox(height: 25),
                       DottedBorder(
    borderType: BorderType.RRect,
@@ -120,4 +120,19 @@ class SplashScreenWidget extends StatelessWidget {
         ],
       );
   }
+}
+class ClipPathClass extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    Path path = Path();
+
+    path.addOval(Rect.fromCircle(
+      center: Offset(size.width / 2, size.height),
+      radius: size.height - 5,
+    ));
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }

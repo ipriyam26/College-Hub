@@ -25,12 +25,12 @@ class _Splash1State extends State<Splash1> {
           PageView(
             controller: _controller,
             children: [
-              // SplashScreenWidget(quote: '''No waiting or writing /n emails now
-              //  ''', image_url: "assets/splash3.png"),
+              SplashScreenWidget(quote: '''No waiting or writing /n emails now
+               ''', image_url: "assets/splash3.png",index: true,),
               SplashScreenWidget(quote: '''Get best in quality \n services and solution to \n every problem
-               ''', image_url: "assets/splash2.png"),
+               ''', image_url: "assets/splash2.png",index: true,),
               SplashScreenWidget(quote: '''Easy service \n booking & scheduling
-               ''', image_url: "assets/splash2.png"),
+               ''', image_url: "assets/splash2.png",index: false,),
               
               
               
