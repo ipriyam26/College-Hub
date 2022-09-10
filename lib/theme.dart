@@ -4,7 +4,33 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Themes {
   static final dark = ThemeData.dark().copyWith();
+  // AppBar(
+  //     elevation: 0,
+  //     centerTitle: false,
+  //     backgroundColor: Theme.of(context).backgroundColor,
+  //     leading: IconButton(
+  //       icon: Icon(
+  //         Icons.arrow_back_ios_new_rounded,
+  //         color: Theme.of(context).dividerColor,
+  //       ),
+  //       onPressed: () {
+  //         Get.back();
+  //       },
+  //     ),
+  //     title: Text(
+  //       'Maintenance',
+  //       style: Theme.of(context).textTheme.headline4!.apply(
+  //             color: Theme.of(context).dividerColor,
+  //           ),
+  //     ),
+  //   )
   static final light = ThemeData.light().copyWith(
+//     appBarTheme: AppBarTheme(
+// elevation: 0,
+// centerTitle: false,
+// backgroundColor: light.backgroundColor,
+
+//     ),
     textTheme: TextTheme(
       // headline1: TextStyle(
       //   fontSize: 96.sp,
@@ -72,6 +98,12 @@ class Themes {
         // height: 21.sp,
         color: const Color(0xff888888),
         // fontFamily: GoogleFonts.raleway().fontFamily,
+      ),
+      overline: TextStyle(
+        fontSize: 14.sp,
+        fontWeight: FontWeight.w500,
+        fontFamily: GoogleFonts.inter().fontFamily,
+        color:  Colors.white,
       ),
 
       // overline: TextStyle(
