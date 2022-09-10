@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 class SelectTiming extends StatefulWidget {
-   SelectTiming({Key? key}) : super(key: key);
+SelectTiming({Key? key}) : super(key: key);
 final listTiming = [
       '02:30 PM',
       '03:30 PM',

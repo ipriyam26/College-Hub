@@ -43,6 +43,7 @@ dependencies:
   anim_search_bar: ^2.0.2
   table_calendar: ^3.0.6
   intl: ^0.17.0
+  timelines: ^0.1.0
 
 
 dev_dependencies:
