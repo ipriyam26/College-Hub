@@ -3,6 +3,7 @@
     "comments": "",
     "textMateRules": []
   },
-  "editor.defaultFormatter": "Dart-Code.dart-code",
-        "editor.formatOnSave": true
+
+  "cSpell.words": ["raleway", "screenutil"]
+
 }
