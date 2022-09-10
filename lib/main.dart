@@ -4,15 +4,19 @@ import 'package:college_hub/Screens/cleaning.dart';
 import 'package:college_hub/Screens/food_outlets/kathi.dart';
 import 'package:college_hub/Screens/home.dart';
 import 'package:college_hub/Screens/laundry.dart';
+import 'package:college_hub/Screens/splash_screen/splash_screen.dart';
 import 'package:college_hub/theme.dart';
 import 'package:college_hub/widgets/cleaning_popup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+import 'Screens/intro.dart';
+
 void main() {
   runApp(const MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -30,7 +34,7 @@ class MyApp extends StatelessWidget {
         theme: Themes.light,
         darkTheme: Themes.dark,
         debugShowCheckedModeBanner: false,
-        home:   const Kathi(),
+        home:   const Splash1(),
       );
     });
   }

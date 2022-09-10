@@ -45,7 +45,9 @@ class FoodListBar extends StatelessWidget {
             Icon(Icons.circle, color:Veg ? Colors.green : Colors.red, size: 10.sp),
           ],
         ),
-        Container(
+        
+        if(bestseller)...[
+          Container(
           
           decoration: BoxDecoration(
             color: Colors.amber,
@@ -59,9 +61,11 @@ class FoodListBar extends StatelessWidget {
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.subtitle2?.copyWith(color:Colors.red),),
         )
+        ],
+        
                     ],
                   ),
-                  if(this.category != null)...[
+                  if(this.category != "")...[
                     Text(
                     this.category,
                     style: Theme.of(context).textTheme.subtitle1,
@@ -90,12 +94,25 @@ class FoodListBar extends StatelessWidget {
                 ],
                 
               ),
-              CircleAvatar(
-                  radius: 60.0.sp,
-                  backgroundImage:
-                      AssetImage(imageurl),
-                  backgroundColor: Colors.transparent,
-                )
+              Container(
+              height: 100.h,
+              width: 90.w,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                  "assets/kathi.png",
+                )),
+                borderRadius: BorderRadius.circular(10.sp)
+              ),
+              
+            ),
+              // CircleAvatar(
+              //     radius: 60.0.sp,
+              //     backgroundImage:
+              //         AssetImage(imageurl),
+              //     backgroundColor: Colors.transparent,
+              //   )
              
               
             ],
