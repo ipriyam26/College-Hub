@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+import 'Screens/Appointment.dart';
 import 'Screens/Salon.dart';
 import 'Screens/avaliable_items.dart';
+import 'Screens/profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
             theme: Themes.light,
             darkTheme: Themes.dark,
             debugShowCheckedModeBanner: false,
-            home: const Salon(),
+            home: const Profile(),
           );
         });
   }
