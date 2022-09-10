@@ -1,3 +1,4 @@
+import 'package:college_hub/Widgets/select_timing.dart';
 import 'package:college_hub/widgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -100,13 +101,13 @@ class Appointment extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const [
-                  timming(
+                  Timing(
                     time: '02:30 PM',
                   ),
-                  timming(
+                  Timing(
                     time: '02:30 PM',
                   ),
-                  timming(
+                  Timing(
                     time: '02:30 PM',
                   )
                 ],
@@ -117,13 +118,13 @@ class Appointment extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const [
-                  timming(
+                  Timing(
                     time: '02:30 PM',
                   ),
-                  timming(
+                  Timing(
                     time: '02:30 PM',
                   ),
-                  timming(
+                  Timing(
                     time: '02:30 PM',
                   ),
                 ],
