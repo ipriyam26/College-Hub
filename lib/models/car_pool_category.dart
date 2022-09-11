@@ -20,7 +20,7 @@ class CarPoolData {
 
   factory CarPoolData.fromJson(Map<String, dynamic> json) {
     return CarPoolData(
-        location: json['icon'],
+        location: json['location'],
         name: json['name'],
         Time: json['Time'],
         seatsAvailable: json['seatsAvailable'],

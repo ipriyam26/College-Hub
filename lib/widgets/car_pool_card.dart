@@ -30,7 +30,7 @@ class CarPoolCard extends StatelessWidget {
       child: Container(
         width: double.infinity,
         height: 104.h,
-        color: Colors.white,
+        color: Theme.of(context).backgroundColor,
         child: Row(
           children: [
             Padding(
