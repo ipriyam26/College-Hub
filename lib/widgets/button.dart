@@ -26,6 +26,7 @@ class button extends StatelessWidget {
               text,
               style: TextStyle(
                 fontSize: 17.sp,
+                color: Theme.of(context).backgroundColor,
                 fontWeight: FontWeight.bold,
               ),
             ),

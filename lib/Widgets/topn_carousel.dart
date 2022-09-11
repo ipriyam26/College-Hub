@@ -1,7 +1,12 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'dart:math' as math;
+
+import 'package:get/get_core/src/get_main.dart';
+
+import '../Screens/notifications.dart';
 
 class BannerCarousel extends StatelessWidget {
   const BannerCarousel({
@@ -164,20 +169,25 @@ class Top extends StatelessWidget {
           ),
           ClipRRect(
             borderRadius: BorderRadius.circular(15.r),
-            child: Container(
-              width: 50.w,
-              height: 50.h,
-              alignment: Alignment.center,
-              color: const Color(0xffF3F3F3),
-              child: Stack(alignment: Alignment.topRight, children: [
-                Image.asset(
-                  'assets/Path_425-2.png',
-                  height: 20.h,
-                  width: 20.w,
-                  fit: BoxFit.fill,
-                ),
-                Image.asset('assets/Ellipse 17.png'),
-              ]),
+            child: GestureDetector(
+              onTap: () {
+                Get.to(Notifications());
+              },
+              child: Container(
+                width: 50.w,
+                height: 50.h,
+                alignment: Alignment.center,
+                color: const Color(0xffF3F3F3),
+                child: Stack(alignment: Alignment.topRight, children: [
+                  Image.asset(
+                    'assets/Path_425-2.png',
+                    height: 20.h,
+                    width: 20.w,
+                    fit: BoxFit.fill,
+                  ),
+                  Image.asset('assets/Ellipse 17.png'),
+                ]),
+              ),
             ),
           )
         ],
