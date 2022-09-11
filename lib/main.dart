@@ -1,3 +1,8 @@
+
+import 'package:college_hub/Screens/car_pool.dart';
+import 'package:college_hub/Screens/food_outlets/food_outlet.dart';
+import 'package:college_hub/Screens/TuckShop.dart';
+
 import 'package:college_hub/Screens/cleaning.dart';
 import 'package:college_hub/Screens/maintenance.dart';
 import 'package:college_hub/Screens/sign_up.dart';
@@ -34,7 +39,6 @@ class MyApp extends StatelessWidget {
             theme: Themes.light,
             darkTheme: Themes.dark,
             debugShowCheckedModeBanner: false,
-
             home: SplashMain(),
           );
         });
