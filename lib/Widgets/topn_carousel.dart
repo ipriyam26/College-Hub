@@ -1,10 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:college_hub/Screens/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'dart:math' as math;
 
-import 'package:get/get_core/src/get_main.dart';
 
 import '../Screens/notifications.dart';
 
@@ -125,14 +125,19 @@ class Top extends StatelessWidget {
         children: [
           Row(
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(15.r),
-                child: Container(
-                  color: Theme.of(context).canvasColor,
-                  child: Image.asset(
-                    'assets/29 5.png',
-                    height: 50.h,
-                    width: 50.w,
+              InkWell(
+                onTap: () {
+                  Get.to(() => const Profile());
+                },
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15.r),
+                  child: Container(
+                    color: Theme.of(context).canvasColor,
+                    child: Image.asset(
+                      'assets/29 5.png',
+                      height: 50.h,
+                      width: 50.w,
+                    ),
                   ),
                 ),
               ),
@@ -171,7 +176,7 @@ class Top extends StatelessWidget {
             borderRadius: BorderRadius.circular(15.r),
             child: GestureDetector(
               onTap: () {
-                Get.to(Notifications());
+                Get.to(const Notifications());
               },
               child: Container(
                 width: 50.w,

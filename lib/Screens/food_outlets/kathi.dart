@@ -40,7 +40,7 @@ class Kathi extends StatelessWidget {
               height: 271.h,
               width: 350.w,
               decoration: BoxDecoration(
-                image: DecorationImage(
+                image: const DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage(
                   "assets/kathi.png",
@@ -69,7 +69,7 @@ class Kathi extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(name: "Aloo Paratha", imageurl: "assets/food_items/aloopratha.png", price: "60", bestseller: true, Veg: true,category: "In Bread",),
+              const FoodListBar(name: "Aloo Paratha", imageurl: "assets/food_items/aloopratha.png", price: "60", bestseller: true, Veg: true,category: "In Bread",),
               SizedBox(
                 height: 15.h,
               ),
@@ -77,13 +77,13 @@ class Kathi extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(name: "Fried Chicken", imageurl: "assets/food_items/friedchicken.png", price: "120", bestseller: true, Veg: false,category: "In Bread",),
+              const FoodListBar(name: "Fried Chicken", imageurl: "assets/food_items/friedchicken.png", price: "120", bestseller: true, Veg: false,category: "In Bread",),
 
               SizedBox(
                 height: 10.h,
               ),
 
-              FoodListBar(name: "Chole Bhature", imageurl: "assets/food_items/cholebhature.png", price: "65", bestseller: true, Veg: true,category: "North Indian",),
+              const FoodListBar(name: "Chole Bhature", imageurl: "assets/food_items/cholebhature.png", price: "65", bestseller: true, Veg: true,category: "North Indian",),
 
               SizedBox(
                 height: 15.h,
@@ -95,19 +95,19 @@ class Kathi extends StatelessWidget {
                 height: 10.h,
               ),
 
-              FoodListBar(name: "Aloo Paratha", imageurl: "assets/kathi/aloopratha.png", price: "65", bestseller: false, Veg: true,category:"" ,),
+              const FoodListBar(name: "Aloo Paratha", imageurl: "assets/kathi/aloopratha.png", price: "65", bestseller: false, Veg: true,category:"" ,),
 
               SizedBox(
                 height: 10.h,
               ),
 
-              FoodListBar(name: "Mixed Paratha", imageurl: "assets/kathi/mixedpratha.png", price: "70", bestseller: false, Veg: true,category:"" ,),
+              const FoodListBar(name: "Mixed Paratha", imageurl: "assets/kathi/mixedpratha.png", price: "70", bestseller: false, Veg: true,category:"" ,),
 
               SizedBox(
                 height: 10.h,
               ),
 
-              FoodListBar(name: "Paneer Paratha", imageurl: "assets/kathi/paneerpratha.png", price: "65", bestseller: false, Veg: true,category:"" ,),
+              const FoodListBar(name: "Paneer Paratha", imageurl: "assets/kathi/paneerpratha.png", price: "65", bestseller: false, Veg: true,category:"" ,),
 
               SizedBox(
                 height: 15.h,
@@ -116,17 +116,17 @@ class Kathi extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(name: "Chole Bhature", imageurl: "assets/kathi/cholebhature.png", price: "60", bestseller: false, Veg: true,category:"" ,),
+              const FoodListBar(name: "Chole Bhature", imageurl: "assets/kathi/cholebhature.png", price: "60", bestseller: false, Veg: true,category:"" ,),
 
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(name: "Chole Kulche", imageurl: "assets/kathi.png/cholekulche", price: "60", bestseller: false, Veg: true,category:"" ,),
+              const FoodListBar(name: "Chole Kulche", imageurl: "assets/kathi.png/cholekulche", price: "60", bestseller: false, Veg: true,category:"" ,),
 
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(name: "Pav Bhaji", imageurl: "assets/kathi/paubhaji.png", price: "60", bestseller: false, Veg: true,category:"" ,),
+              const FoodListBar(name: "Pav Bhaji", imageurl: "assets/kathi/paubhaji.png", price: "60", bestseller: false, Veg: true,category:"" ,),
 
               
                 ],

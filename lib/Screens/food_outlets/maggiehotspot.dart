@@ -1,5 +1,3 @@
-import 'package:college_hub/Screens/food_outlets/kathi.dart';
-import 'package:college_hub/widgets/outlet_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -53,7 +51,7 @@ class maggieHotspot extends StatelessWidget {
               Stack(
                 children: [
                   Ink.image(
-                    image: AssetImage(
+                    image: const AssetImage(
                       "assets/maggiehotspot.png",
                     ),
                     colorFilter: 

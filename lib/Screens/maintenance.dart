@@ -1,10 +1,8 @@
-import 'package:college_hub/Screens/cleaning.dart';
 import 'package:college_hub/Widgets/select_timing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:intl/intl.dart';
 
 class MaintenanceScreen extends StatelessWidget {
   const MaintenanceScreen({super.key});
@@ -147,7 +145,7 @@ class _MaintenanceMenuState extends State<MaintenanceMenu> {
           borderRadius: BorderRadius.circular(8.r)),
       focusedBorder: OutlineInputBorder(
           //<-- SEE HERE
-          borderSide: BorderSide(color: Color(0xffE3E3E3)),
+          borderSide: const BorderSide(color: Color(0xffE3E3E3)),
           borderRadius: BorderRadius.circular(8.r)),
       filled: true,
       fillColor: Theme.of(context).backgroundColor,

@@ -7,22 +7,24 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashMain extends StatefulWidget {
+  const SplashMain({super.key});
+
   @override
-  SplashState createState() => new SplashState();
+  SplashState createState() => SplashState();
 }
 
 class SplashState extends State<SplashMain> with AfterLayoutMixin<SplashMain> {
   Future checkFirstSeen() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    bool _seen = (prefs.getBool('seen') ?? false);
+    bool seen = (prefs.getBool('seen') ?? false);
 
-    if (_seen) {
+    if (seen) {
       Navigator.of(context).pushReplacement(
-          new MaterialPageRoute(builder: (context) => new LoginPage()));
+          MaterialPageRoute(builder: (context) => LoginPage()));
     } else {
       await prefs.setBool('seen', true);
       Navigator.of(context).pushReplacement(
-          new MaterialPageRoute(builder: (context) => new Splash1()));
+          MaterialPageRoute(builder: (context) => const Splash1()));
     }
   }
 
@@ -31,9 +33,9 @@ class SplashState extends State<SplashMain> with AfterLayoutMixin<SplashMain> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      body: new Center(
-        child: new Text('Loading...'),
+    return const Scaffold(
+      body: Center(
+        child: Text('Loading...'),
       ),
     );
   }

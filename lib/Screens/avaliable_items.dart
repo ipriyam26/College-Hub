@@ -222,10 +222,10 @@ class outlet_row extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(text1,
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Colors.black, fontWeight: FontWeight.bold)),
               Text(text2,
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Colors.black, fontWeight: FontWeight.bold)),
               SizedBox(
                 height: 20.h,
@@ -233,7 +233,7 @@ class outlet_row extends StatelessWidget {
               Text(
                 text4,
                 style:
-                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                    const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
               )
             ],
           ),

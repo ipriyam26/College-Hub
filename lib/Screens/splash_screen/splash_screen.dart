@@ -1,9 +1,5 @@
-import 'package:college_hub/widgets/foodlist_bar.dart';
 import 'package:college_hub/widgets/splash_screen_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class Splash1 extends StatefulWidget {
   const Splash1({Key? key}) : super(key: key);
@@ -13,7 +9,7 @@ class Splash1 extends StatefulWidget {
 }
 
 class _Splash1State extends State<Splash1> {
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +17,7 @@ class _Splash1State extends State<Splash1> {
       children: [
         PageView(
           controller: _controller,
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           children: [
             SplashScreenWidget(
               quote: '''Easy service \n booking & scheduling

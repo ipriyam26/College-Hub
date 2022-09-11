@@ -19,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.only(bottom: 30),
+        padding: const EdgeInsets.only(bottom: 30),
         child: Column(
           children: <Widget>[
             HeaderContainer("Login"),
@@ -41,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
                     Container(
                       margin: EdgeInsets.only(top: 10.sp),
                       alignment: Alignment.centerRight,
-                      child: Text(
+                      child: const Text(
                         "Forgot Password?",
                       ),
                     ),
@@ -52,7 +52,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: ButtonWidget(
                         onClick: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Kathi()));
+                              MaterialPageRoute(builder: (context) => const Kathi()));
                         },
                         btnText: "LOGIN",
                       ),
@@ -90,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
       height: 47.h,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.black, style: BorderStyle.solid),
-        borderRadius: BorderRadius.all(Radius.circular(20)),
+        borderRadius: const BorderRadius.all(Radius.circular(20)),
         color: Colors.white,
       ),
       padding: EdgeInsets.only(left: 10.sp),

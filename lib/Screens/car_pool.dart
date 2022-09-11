@@ -1,15 +1,11 @@
-import 'package:college_hub/models/car_pool_category.dart';
+import 'package:college_hub/Models/car_pool_category.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../helper/utils.dart';
-import '../widgets/button.dart';
 import '../widgets/car_pool_card.dart';
-import 'food_outlets/kathi.dart';
 
 class CarPool extends StatefulWidget {
   const CarPool({super.key});
@@ -109,11 +105,11 @@ showDialogFunc(context, String name, String destination, String time,
             ),
             padding: EdgeInsets.all(15.sp),
             height: 360.h,
-            width: MediaQuery.of(context).size.width * 0.7,
+            width: 300.w,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(
@@ -168,7 +164,7 @@ showDialogFunc(context, String name, String destination, String time,
                           ),
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -262,7 +258,7 @@ showDialogFunc(context, String name, String destination, String time,
                     )
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 InkWell(
                   onTap: () async {
                     await FlutterPhoneDirectCaller.callNumber('+918384055155');
@@ -270,7 +266,7 @@ showDialogFunc(context, String name, String destination, String time,
                   child: Container(
                     width: 314.w,
                     height: 40.h,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       gradient: LinearGradient(
                           colors: [
                             Color(0xff22ABB9),

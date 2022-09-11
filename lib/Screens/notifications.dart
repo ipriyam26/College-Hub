@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class Notifications extends StatelessWidget {
   const Notifications({Key? key}) : super(key: key);
@@ -23,7 +22,7 @@ class Notifications extends StatelessWidget {
           onTap: () {
             Get.back();
           },
-          child: Icon(
+          child: const Icon(
             Icons.arrow_back_ios,
             color: Colors.black,
           ),
@@ -112,7 +111,7 @@ class NotifyRow extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           color: Colors.white,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
                 color: Colors.grey,
                 blurRadius: 10,
@@ -142,7 +141,7 @@ class NotifyRow extends StatelessWidget {
           ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [Icon(Icons.more_horiz)],
+            children: const [Icon(Icons.more_horiz)],
           ),
         ],
       ),

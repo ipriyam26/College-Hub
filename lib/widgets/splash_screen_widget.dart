@@ -21,12 +21,12 @@ class SplashScreenWidget extends StatelessWidget {
 
   void nextPage() {
     controller.animateToPage(controller.page!.toInt() + 1,
-        duration: Duration(milliseconds: 400), curve: Curves.easeIn);
+        duration: const Duration(milliseconds: 400), curve: Curves.easeIn);
   }
 
   void lastPage() {
     controller.animateToPage(3,
-        duration: Duration(milliseconds: 300), curve: Curves.easeIn);
+        duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
   }
 
   @override
@@ -77,8 +77,8 @@ class SplashScreenWidget extends StatelessWidget {
                         controller: controller,
                         count: 3,
                         effect: ExpandingDotsEffect(
-                            activeDotColor: Color(0xff22A8B9),
-                            dotColor: Color(0xff22A8B9),
+                            activeDotColor: const Color(0xff22A8B9),
+                            dotColor: const Color(0xff22A8B9),
                             dotHeight: 7.h,
                             dotWidth: 7.w),
                       ),
@@ -86,8 +86,8 @@ class SplashScreenWidget extends StatelessWidget {
                       if (index) ...[
                         DottedBorder(
                             borderType: BorderType.RRect,
-                            radius: Radius.circular(20),
-                            dashPattern: [10, 10],
+                            radius: const Radius.circular(20),
+                            dashPattern: const [10, 10],
                             color: Colors.grey,
                             strokeWidth: 2,
                             child: Padding(
