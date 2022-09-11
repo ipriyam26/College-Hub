@@ -4,6 +4,7 @@ import 'package:college_hub/Screens/TuckShop.dart';
 
 import 'package:college_hub/Screens/cleaning.dart';
 import 'package:college_hub/Screens/maintenance.dart';
+import 'package:college_hub/Screens/sign_up.dart';
 import 'package:college_hub/Screens/time_table.dart';
 import 'package:college_hub/theme.dart';
 
