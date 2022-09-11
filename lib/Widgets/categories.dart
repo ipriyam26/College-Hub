@@ -61,7 +61,7 @@ final List<int> cat = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
                 Get.to(() =>  TuckShop());
               }
               else if(index==6){
-                Get.to(() => FoodOutlet());
+                Get.to(() => const FoodOutlet());
               }
               else if(index==7){
                 // Get.to(() => const FoodOutlet());

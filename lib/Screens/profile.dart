@@ -40,7 +40,7 @@ class Profile extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 60.sp,
-                backgroundColor: Color(0xffEEEEEE),
+                backgroundColor: const Color(0xffEEEEEE),
                 child: Container(
                                     padding: const EdgeInsets.all(5.0),
 
@@ -85,7 +85,7 @@ color: Colors.white,
                     height: 65.h,
                     width: 326.w,
                     decoration: BoxDecoration(
-                        color: Color(0xff22A8B9),
+                        color: const Color(0xff22A8B9),
                         borderRadius: BorderRadius.all(Radius.circular(10.sp))),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -186,7 +186,7 @@ class profile_row extends StatelessWidget {
                       shape: BoxShape.circle, color: Colors.grey.shade300),
                   child: Icon(
                     icon,
-                    color: Color(0xff0E7769),
+                    color: const Color(0xff0E7769),
                   ),
                 ),
                 SizedBox(

@@ -73,7 +73,7 @@ class FoodController extends GetxController {
       } else {
         throw Exception('Failed to load food stores');
       }
-    } on Exception catch (e) {
+    } on Exception {
       List<FoodStore> temp = [];
       for (var i = 0; i < placeHolder['stores'].length; i++) {
         temp.add(FoodStore.fromJson(placeHolder['stores'][i]));
@@ -97,7 +97,7 @@ class FoodController extends GetxController {
       } else {
         throw Exception('Failed to load food items');
       }
-    } on Exception catch (e) {
+    } on Exception {
       List<FoodStore> temp = [];
       for (var i = 0; i < placeHolder['stores'].length; i++) {
         temp.add(FoodStore.fromJson(placeHolder['stores'][i]));
