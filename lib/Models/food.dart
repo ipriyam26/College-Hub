@@ -80,7 +80,7 @@ class FoodOrder {
     required this.orderStatus,
     required this.postedAt,
   });
-factory FoodOrder.fromJson(Map<String, dynamic> json) {
+  factory FoodOrder.fromJson(Map<String, dynamic> json) {
     return FoodOrder(
       enrollmentNo: json['enrollment_no'],
       storeId: json['store_id'],
@@ -100,10 +100,9 @@ factory FoodOrder.fromJson(Map<String, dynamic> json) {
         'order_status': orderStatus,
         'posted_at': postedAt,
       };
-
 }
 
-class FoodStatus{
+class FoodStatus {
   final String id;
   final String status;
   final String postedOn;
@@ -121,5 +120,4 @@ class FoodStatus{
       postedOn: json['posted_on'],
     );
   }
-  
 }
