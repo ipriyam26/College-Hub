@@ -1,6 +1,7 @@
 import 'package:college_hub/Screens/food_outlets/kathi.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import '../../widgets/button.dart';
 import '../../widgets/loginpage_header.dart';
@@ -51,8 +52,7 @@ class _LoginPageState extends State<LoginPage> {
                     Center(
                       child: ButtonWidget(
                         onClick: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Kathi()));
+                          Get.to(Kathi());
                         },
                         btnText: "LOGIN",
                       ),
