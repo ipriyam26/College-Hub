@@ -1,9 +1,5 @@
-import 'package:college_hub/widgets/foodlist_bar.dart';
 import 'package:college_hub/widgets/splash_screen_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class Splash1 extends StatefulWidget {
   const Splash1({Key? key}) : super(key: key);

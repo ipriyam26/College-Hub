@@ -29,7 +29,7 @@ class FoodOutlet extends StatelessWidget {
             size: 18.sp,
           ),
         ),
-        elevation: 5,
+        elevation: 0,
         backgroundColor: Colors.white,
         // title: Text(
         //   'Food Outlets',

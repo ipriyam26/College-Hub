@@ -1,4 +1,4 @@
-import 'package:college_hub/models/car_pool_category.dart';
+import 'package:college_hub/Models/car_pool_category.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
