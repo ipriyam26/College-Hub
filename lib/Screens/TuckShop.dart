@@ -11,11 +11,11 @@ class TuckShop extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        leading: Icon(
+        leading: const Icon(
           Icons.arrow_back_ios,
           color: Colors.black,
         ),
-        title: Text(
+        title: const Text(
           'Tuck Shop',
           style: TextStyle(color: Colors.black),
         ),
@@ -29,7 +29,7 @@ class TuckShop extends StatelessWidget {
               AnimSearchBar(
                   width: 305.w,
                   color: Colors.white,
-                  prefixIcon: Icon(
+                  prefixIcon: const Icon(
                     Icons.search,
                     color: Colors.black,
                   ),
@@ -39,7 +39,7 @@ class TuckShop extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  shopItem(
+                  const shopItem(
                     image: 'assets/fruits.png',
                     color: (0xFFC1EDD1),
                     desc: 'Fruits',
@@ -47,7 +47,7 @@ class TuckShop extends StatelessWidget {
                   SizedBox(
                     width: 10.w,
                   ),
-                  shopItem(
+                  const shopItem(
                     image: 'assets/drinks.png',
                     color: (0xFFFBE7D2),
                     desc: 'Drinks',
@@ -60,7 +60,7 @@ class TuckShop extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  shopItem(
+                  const shopItem(
                     image: 'assets/personal.png',
                     color: (0xFFF7A593),
                     desc: 'Personal \nEssentials',
@@ -68,7 +68,7 @@ class TuckShop extends StatelessWidget {
                   SizedBox(
                     width: 10.w,
                   ),
-                  shopItem(
+                  const shopItem(
                     image: 'assets/chips.png',
                     color: (0xFFD3B0E0),
                     desc: 'Bakery &\n Snacks',
@@ -81,7 +81,7 @@ class TuckShop extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  shopItem(
+                  const shopItem(
                     image: 'assets/liquid.png',
                     color: (0xFFFFF9E5),
                     desc: 'Dairy & Eggs',
@@ -89,7 +89,7 @@ class TuckShop extends StatelessWidget {
                   SizedBox(
                     width: 10.w,
                   ),
-                  shopItem(
+                  const shopItem(
                     image: 'assets/icecream.png',
                     color: (0xFFD2E7F2),
                     desc: 'Frozen',
