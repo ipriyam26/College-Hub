@@ -18,6 +18,7 @@ class Home extends StatelessWidget {
     'image 49.png',
     'image 50.png',
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
