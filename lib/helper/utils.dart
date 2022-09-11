@@ -1,4 +1,4 @@
-import 'package:college_hub/models/car_pool_category.dart';
+import 'package:college_hub/Models/car_pool_category.dart';
 
 class Utils {
   static List<CarPoolData> getCarPoolData() {

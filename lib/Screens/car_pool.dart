@@ -1,15 +1,11 @@
-import 'package:college_hub/models/car_pool_category.dart';
+import 'package:college_hub/Models/car_pool_category.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../helper/utils.dart';
-import '../widgets/button.dart';
 import '../widgets/car_pool_card.dart';
-import 'food_outlets/kathi.dart';
 
 class CarPool extends StatefulWidget {
   const CarPool({super.key});
@@ -40,14 +36,6 @@ class _CarPoolState extends State<CarPool> {
         ),
         elevation: 5,
         backgroundColor: Colors.white,
-        // title: Text(
-        //   'Food Outlets',
-        //   style: TextStyle(
-        //     color: Colors.black,
-        //     fontWeight: FontWeight.bold,
-        //     fontSize: 16.sp
-        //   ),
-        // ),
       ),
       body: Container(
         child: Column(
@@ -104,17 +92,16 @@ showDialogFunc(context, String name, String destination, String time,
           type: MaterialType.transparency,
           child: Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Colors.white,
-            ),
+                borderRadius: BorderRadius.circular(10),
+                color: Theme.of(context).backgroundColor),
             padding: EdgeInsets.all(15.sp),
             height: 360.h,
-            width: MediaQuery.of(context).size.width * 0.7,
+            width: 300.w,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 SizedBox(
-                  height: 10,
+                  height: 10.h,
                 ),
                 Text(
                   "CAR POOL",
@@ -168,7 +155,9 @@ showDialogFunc(context, String name, String destination, String time,
                           ),
                         ],
                       ),
-                      Spacer(),
+                      Spacer(
+                        flex: 1,
+                      ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
