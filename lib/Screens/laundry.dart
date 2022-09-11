@@ -1,4 +1,9 @@
+
 import 'package:college_hub/widgets/cleaning_popup.dart';
+
+import 'package:college_hub/controllers/laundaryController.dart';
+import 'package:college_hub/controllers/user_controller.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -6,8 +11,9 @@ import 'package:get/get.dart';
 import 'car_pool.dart';
 
 class Laundry extends StatelessWidget {
-  const Laundry({Key? key}) : super(key: key);
+  Laundry({Key? key}) : super(key: key);
 
+  // LaundaryController laundaryController = Get.put(LaundaryController());
   @override
   Widget build(BuildContext context) {
     var appBarMain = AppBar(
@@ -42,7 +48,7 @@ class Laundry extends StatelessWidget {
                   LabelField(
                     label: "Enrollment Number",
                     width: 345.w,
-                    data: "E20CSE479",
+                    data: "dfsdf",
                   ),
                   SizedBox(
                     height: 10.h,
@@ -64,6 +70,7 @@ class Laundry extends StatelessWidget {
             SizedBox(
               height: 30.h,
             ),
+
             Expanded(
               child: Align(
                 alignment: FractionalOffset.bottomCenter,
@@ -127,6 +134,7 @@ class Laundry extends StatelessWidget {
                     ]),
                   ),
                 ),
+
               ),
             )
           ],
@@ -170,12 +178,16 @@ class _LaundryListState extends State<LaundryList> {
             children: [
               Row(
                 children: [
+
                   Image.asset(widget.iconUrl),
+
                   SizedBox(
                     width: 17.w,
                   ),
                   Text(
+
                     widget.itemName,
+
                     style: Theme.of(context)
                         .textTheme
                         .bodyText1!
@@ -193,6 +205,7 @@ class _LaundryListState extends State<LaundryList> {
                       decoration: BoxDecoration(
                           color: Theme.of(context).cardColor,
                           borderRadius: BorderRadius.circular(5.r)),
+
                       child: GestureDetector(
                         onTap: (() {
                           minValue();
@@ -202,19 +215,23 @@ class _LaundryListState extends State<LaundryList> {
                           color: Colors.black,
                           size: 10.sp,
                         ),
+
                       ),
                     ),
                   ),
                   Container(
                     margin: EdgeInsets.symmetric(horizontal: 8.w),
                     child: Text(
+
                       "$noOfbag",
+
                       style: Theme.of(context)
                           .textTheme
                           .bodyText1!
                           .apply(color: Colors.black, fontWeightDelta: 700),
                     ),
                   ),
+
                   noOfbag == 10
                       ? ClipOval(
                           child: Container(
@@ -256,6 +273,7 @@ class _LaundryListState extends State<LaundryList> {
                             ),
                           ),
                         ),
+
                 ],
               ),
             ],
