@@ -41,7 +41,7 @@ class CarPoolCard extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(16.sp),
+              padding: EdgeInsets.all(5.sp),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,

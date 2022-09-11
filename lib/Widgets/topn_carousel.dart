@@ -75,7 +75,7 @@ class Banner extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              height: 28.h,
+              height: 25.h,
               width: 76.w,
               alignment: Alignment.center,
               margin: EdgeInsets.only(bottom: 2.h),
@@ -85,21 +85,16 @@ class Banner extends StatelessWidget {
               ),
               child: Text(
                 '001-B-LA',
-                style: Theme.of(context).textTheme.bodyText2,
+                style: Theme.of(context).textTheme.caption,
               ),
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'New Seminar on Deep Learning',
-                  style: Theme.of(context).textTheme.headline3,
-                ),
-                Text(
-                  'By Vipul Mishra',
-                  style: Theme.of(context).textTheme.subtitle2,
-                ),
-              ],
+            Text(
+              'New Seminar on Deep Learning',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              'By Vipul Mishra',
+              style: Theme.of(context).textTheme.subtitle2,
             ),
             Text(
               '5:00PM, 3 Sep, Thursday',
