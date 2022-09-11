@@ -1,4 +1,4 @@
-class Laundry {
+class LaundryPost {
   final int itemCount;
   final int tshirt;
   final int shorts;
@@ -8,7 +8,7 @@ class Laundry {
   final String orderId;
   final String enrollmentNo;
 
-  Laundry({
+  LaundryPost({
     required this.itemCount,
     required this.tshirt,
     required this.shorts,
@@ -19,8 +19,8 @@ class Laundry {
     required this.enrollmentNo,
   });
 
-  factory Laundry.fromJson(Map<String, dynamic> json) {
-    return Laundry(
+  factory LaundryPost.fromJson(Map<String, dynamic> json) {
+    return LaundryPost(
       itemCount: json['item_count'],
       tshirt: json['tshirt'],
       shorts: json['shorts'],
@@ -39,6 +39,31 @@ class Laundry {
         'cardigans': cardigans,
         'dress': dress,
         'others': others,
+        'order_id': orderId,
+        'enrollment_no': enrollmentNo,
+      };
+}
+class LaundryStatus{
+  final String status;
+  final String orderId;
+  final String enrollmentNo;
+
+  LaundryStatus({
+    required this.status,
+    required this.orderId,
+    required this.enrollmentNo,
+  });
+
+  factory LaundryStatus.fromJson(Map<String, dynamic> json) {
+    return LaundryStatus(
+      status: json['status'],
+      orderId: json['order_id'], 
+      enrollmentNo: json['enrollment_no'],
+    );
+  }
+
+  Map<String, dynamic> toJson() => {
+        'status': status,
         'order_id': orderId,
         'enrollment_no': enrollmentNo,
       };
