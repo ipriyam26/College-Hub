@@ -76,17 +76,15 @@ class Themes {
           fontFamily: GoogleFonts.workSans().fontFamily,
           color: const Color(0xff161616)),
       bodyText1: TextStyle(
-        fontSize: 15.sp,
-        fontWeight: FontWeight.w400,
-        fontFamily: GoogleFonts.poppins().fontFamily,
-        color: Colors.black
-      ),
+          fontSize: 15.sp,
+          fontWeight: FontWeight.w400,
+          fontFamily: GoogleFonts.poppins().fontFamily,
+          color: Colors.black),
       bodyText2: TextStyle(
-       fontSize: 10.sp,
-        fontWeight: FontWeight.w800,
-        fontFamily: GoogleFonts.workSans().fontFamily,
-        color: const Color(0xff22A8B9)
-      ),
+          fontSize: 10.sp,
+          fontWeight: FontWeight.w800,
+          fontFamily: GoogleFonts.workSans().fontFamily,
+          color: const Color(0xff22A8B9)),
       button: TextStyle(
         fontSize: 17.sp,
         fontWeight: FontWeight.w700,
@@ -129,10 +127,10 @@ class Themes {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.r),
           ),
-          textStyle:
-              TextStyle(color: const Color(0xffffffff),
+          textStyle: TextStyle(
+              color: const Color(0xffffffff),
               fontFamily: GoogleFonts.poppins().fontFamily,
-               fontSize: 17.sp)),
+              fontSize: 17.sp)),
     ),
     bottomAppBarColor: Colors.deepPurple,
     buttonTheme: const ButtonThemeData(

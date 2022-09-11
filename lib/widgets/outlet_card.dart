@@ -17,9 +17,12 @@ class outletCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 5,
+      shadowColor: Theme.of(context).disabledColor,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24),
+          borderRadius: BorderRadius.circular(16),
+          
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
