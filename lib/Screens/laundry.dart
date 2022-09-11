@@ -333,7 +333,7 @@ showcleaningpopup(context) {
                   ),
                 ),
                 SizedBox(
-                  height: 6.h,
+                  height: 20.h,
                 ),
                 Text(
                   'Sorry no more than 10 clothes \ncan be selected',
@@ -341,7 +341,7 @@ showcleaningpopup(context) {
                   style: Theme.of(context).textTheme.headline5,
                 ),
                 SizedBox(
-                  height: 10.h,
+                  height: 20.h,
                 ),
                 InkWell(
                   onTap: () {
@@ -364,7 +364,7 @@ showcleaningpopup(context) {
                     ),
                     alignment: Alignment.center,
                     child: Text(
-                      "Send Request",
+                      "OK",
                       style: Theme.of(context)
                           .textTheme
                           .headline5!
