@@ -42,7 +42,7 @@ dependencies:
   introduction_screen: ^3.0.2
   anim_search_bar: ^2.0.2
   table_calendar: ^3.0.6
-
+  flutter_phone_direct_caller: ^2.1.1
   flutter_custom_clippers: ^2.0.0
   dotted_border: ^1.0.6
   smooth_page_indicator: ^1.0.0+2
