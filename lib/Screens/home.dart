@@ -1,4 +1,3 @@
-
 import 'package:college_hub/Widgets/categories.dart';
 import 'package:college_hub/Widgets/topn_carousel.dart';
 import 'package:flutter/material.dart';
@@ -39,5 +38,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-
-

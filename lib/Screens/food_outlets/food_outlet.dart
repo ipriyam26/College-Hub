@@ -1,3 +1,7 @@
+import 'package:college_hub/Screens/food_outlets/chaiok.dart';
+import 'package:college_hub/Screens/food_outlets/kathi.dart';
+import 'package:college_hub/Screens/food_outlets/maggiehotspot.dart';
+import 'package:college_hub/Screens/food_outlets/quench.dart';
 import 'package:college_hub/widgets/outlet_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -44,19 +48,47 @@ class FoodOutlet extends StatelessWidget {
           children:  [
             Padding(
               padding: EdgeInsets.all(8.0.sp),
-              child: const outletCard(imageurl:"assets/kathi.png",outletname: "Kathi Junction",category:"North Indian , Veg & Non-Veg , Bevrages",)
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Kathi()),
+                );
+              },
+                child: const outletCard(imageurl:"assets/kathi.png",outletname: "Kathi Junction",category:"North Indian , Veg & Non-Veg , Bevrages",))
               ),
             Padding(
               padding: EdgeInsets.all(8.0.sp),
-              child:const outletCard(imageurl:"assets/maggiehotspot.png", outletname:"Maggie Hotspot",category:'''North Indian , Veg & Non-Veg , Bevrages''')
+              child:GestureDetector(
+                onDoubleTap: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const maggieHotspot()),
+                );
+              },
+                child: const outletCard(imageurl:"assets/maggiehotspot.png", outletname:"Maggie Hotspot",category:'''Snacks, Munchies, Desserts'''))
               ),
               Padding(
               padding: EdgeInsets.all(8.0.sp),
-              child: const outletCard(imageurl:"assets/quench.png",outletname: "Quench",category:'''North Indian , Veg & Non-Veg , Bevrages''')
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Quench()),
+                );
+              },
+                child: const outletCard(imageurl:"assets/quench.png",outletname: "Quench",category:'''Burgers, Mocktails, Wraps, Waffels'''))
               ),
               Padding(
               padding: EdgeInsets.all(8.0.sp),
-              child: const outletCard(imageurl:"assets/chaiok.png",outletname: "Chai Ok",category:'''North Indian , Veg & Non-Veg , Bevrages:''')
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const chaiOk()),
+                );
+              },
+                child: const outletCard(imageurl:"assets/chaiok.png",outletname: "Chai Ok",category:'''Street Style, Juices, Coffee, Tea'''))
               )
 
           ],

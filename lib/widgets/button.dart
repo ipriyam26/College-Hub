@@ -26,12 +26,48 @@ class button extends StatelessWidget {
               text,
               style: TextStyle(
                 fontSize: 17.sp,
+                color: Theme.of(context).backgroundColor,
                 fontWeight: FontWeight.bold,
               ),
             ),
           ),
         )
       ],
+    );
+  }
+}
+
+class ButtonWidget extends StatelessWidget {
+  var btnText = "";
+  var onClick;
+
+  ButtonWidget({required this.btnText, this.onClick});
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onClick,
+      child: Container(
+        width: 314.w,
+        height: 55.h,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [
+            Color(0xff22ABB9),
+            Color(0xff22ABB9),
+          ], end: Alignment.centerLeft, begin: Alignment.centerRight),
+          borderRadius: BorderRadius.all(
+            Radius.circular(20),
+          ),
+        ),
+        alignment: Alignment.center,
+        child: Text(
+          btnText,
+          style: Theme.of(context)
+              .textTheme
+              .headline4!
+              .copyWith(color: Theme.of(context).backgroundColor),
+        ),
+      ),
     );
   }
 }
