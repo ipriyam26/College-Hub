@@ -4,8 +4,8 @@ class Library {
   final String issueNo;
   final DateTime issueDate;
   final DateTime returnDate;
-  
-Library({
+
+  Library({
     required this.orderId,
     required this.bookId,
     required this.issueNo,
@@ -31,7 +31,4 @@ Library({
       'return_date': returnDate.toIso8601String(),
     };
   }
-
-  
-
 }

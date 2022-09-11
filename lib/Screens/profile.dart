@@ -1,9 +1,13 @@
+import 'package:college_hub/controllers/laundaryController.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class Profile extends StatelessWidget {
-  const Profile({Key? key}) : super(key: key);
+  Profile({Key? key}) : super(key: key);
 
+  UserController userController = Get.put(UserController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +58,7 @@ class Profile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Priyam Shrivastava',
+                userController.user.secondName,
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 16.sp,

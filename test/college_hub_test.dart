@@ -12,17 +12,13 @@ import 'package:college_hub/main.dart';
 import 'package:get/get.dart';
 
 void main() {
-  testWidgets('Get material App', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+  testWidgets(
+    'Get material App',
+    (WidgetTester tester) async {
+      // Build our app and trigger a frame.
+      await tester.pumpWidget(MyApp());
 
-    expect(find.byType(GetMaterialApp), findsOneWidget);
-  },);
-
-  testWidgets('Get material App', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
-
-    expect(find.text('Submit Request'), findsNWidgets(11));
-  // });
+      expect(find.byType(GetMaterialApp), findsOneWidget);
+    },
+  );
 }
