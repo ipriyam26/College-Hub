@@ -8,6 +8,7 @@ class Laundry extends StatelessWidget {
   Laundry({Key? key}) : super(key: key);
 
   // LaundaryController laundaryController = Get.put(LaundaryController());
+
   @override
   Widget build(BuildContext context) {
     var appBarMain = AppBar(
@@ -42,7 +43,7 @@ class Laundry extends StatelessWidget {
                   LabelField(
                     label: "Enrollment Number",
                     width: 345.w,
-                    data: "dfsdf",
+                    data: "E20CSE397",
                   ),
                   SizedBox(
                     height: 10.h,
@@ -53,7 +54,7 @@ class Laundry extends StatelessWidget {
                       LabelField(
                           label: "Laundry Bag Number",
                           width: 125.w,
-                          data: "812"),
+                          data: "sdsd"),
                       LabelField(
                           label: "Date", width: 125.w, data: "01-Sep-2022")
                     ],

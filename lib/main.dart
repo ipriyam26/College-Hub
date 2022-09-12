@@ -1,4 +1,5 @@
 import 'package:college_hub/Screens/cleaning.dart';
+import 'package:college_hub/Screens/laundry.dart';
 import 'package:college_hub/Screens/maintenance.dart';
 import 'package:college_hub/Screens/sign_up.dart';
 import 'package:college_hub/Screens/time_table.dart';
@@ -8,7 +9,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+import 'Screens/TuckShop.dart';
 import 'Screens/authentication/login_page.dart';
+import 'Screens/food_outlets/kathi.dart';
+import 'Screens/home.dart';
+import 'Screens/notifications.dart';
+import 'Screens/order_summary.dart';
 import 'Screens/splash_screen/mainstart_screen.dart';
 
 void main() {
@@ -31,7 +37,7 @@ class MyApp extends StatelessWidget {
             theme: Themes.light,
             darkTheme: Themes.dark,
             debugShowCheckedModeBanner: false,
-            home: MaintenanceScreen(),
+            home: OrderSummary(),
           );
         });
   }
