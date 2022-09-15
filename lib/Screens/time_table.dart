@@ -5,7 +5,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'dart:math' as math;
 
-
 class TimeTable extends StatelessWidget {
   TimeTable({Key? key}) : super(key: key);
   final dummyData = [
@@ -44,9 +43,6 @@ class TimeTable extends StatelessWidget {
       'code': 'CSET-363',
       'type': 2,
     },
-   
-   
-  
   ];
   @override
   Widget build(BuildContext context) {
@@ -143,12 +139,12 @@ class TimeTable extends StatelessWidget {
               weekendStyle: Theme.of(context).textTheme.overline!,
             ),
             calendarStyle: CalendarStyle(
-              todayTextStyle: Theme.of(context).textTheme.overline!.apply(
-                color: Theme.of(context).dividerColor,
-              ),
-              todayDecoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color:Theme.of(context).backgroundColor),
+                todayTextStyle: Theme.of(context).textTheme.overline!.apply(
+                      color: Theme.of(context).dividerColor,
+                    ),
+                todayDecoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Theme.of(context).backgroundColor),
                 outsideTextStyle: Theme.of(context).textTheme.overline!.apply(
                       color: Colors.white54,
                     ),
@@ -161,6 +157,7 @@ class TimeTable extends StatelessWidget {
     );
   }
 }
+
 class Display extends StatelessWidget {
   String? name;
   String? code;
@@ -190,8 +187,7 @@ class Display extends StatelessWidget {
               color: colloid.withOpacity(0.3),
             ),
             margin: EdgeInsets.only(top: 10.h),
-
-            padding: EdgeInsets.symmetric(horizontal:11.h),
+            padding: EdgeInsets.symmetric(horizontal: 11.h),
             height: type == 2 ? 71.h : 40.h,
             width: 271.w,
             child: Row(
@@ -205,8 +201,7 @@ class Display extends StatelessWidget {
                       style: TextStyle(
                         fontFamily: GoogleFonts.montserrat().fontFamily,
                         fontWeight: FontWeight.w700,
-                                                fontSize: 14.sp,
-
+                        fontSize: 14.sp,
                         color: colloid,
                       ),
                     ),
@@ -256,7 +251,7 @@ class CenterLine extends StatelessWidget {
       Container(
         height: 500.h,
         width: 20.w,
-        margin: EdgeInsets.only(top:3.h),
+        margin: EdgeInsets.only(top: 3.h),
         child: ListView.builder(
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
@@ -290,7 +285,7 @@ class TimeBar extends StatelessWidget {
     return Container(
       height: 500.h,
       width: 48.w,
-      margin: EdgeInsets.only(top:4.h),
+      margin: EdgeInsets.only(top: 4.h),
       // color: Colors.pink,
       child: ListView.builder(
           physics: const NeverScrollableScrollPhysics(),

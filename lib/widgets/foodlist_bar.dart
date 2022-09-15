@@ -92,12 +92,12 @@ class FoodListBar extends StatelessWidget {
                     child: InkWell(
                       splashColor: Colors.red, // Splash color
                       onTap: () {},
-                      child: const SizedBox(
-                          width: 20,
-                          height: 20,
+                      child: SizedBox(
+                          width: 20.w,
+                          height: 20.w,
                           child: Icon(
                             Icons.favorite_border,
-                            size: 15,
+                            size: 15.sp,
                           )),
                     ),
                   ),

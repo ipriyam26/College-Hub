@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class MaintenanceScreen extends StatelessWidget {
   const MaintenanceScreen({super.key});
- 
+
   @override
   Widget build(BuildContext context) {
     var appBarMaintenance = AppBar(
@@ -30,92 +30,94 @@ class MaintenanceScreen extends StatelessWidget {
       ),
     );
 
-   
-
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: appBarMaintenance,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Column(
-            children: [
-              SizedBox(height: 10.h,),
-              Container(
-                margin: EdgeInsets.only(left: 24.w, right: 22.h),
-                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  SizedBox(width: 260.w, child: MaintenanceMenu()),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SingleChildScrollView(
+              child: Column(
+                children: [
                   SizedBox(
-                    height: 25.h,
+                    height: 10.h,
                   ),
-                  describeYourProblem(context),
-                  SizedBox(
-                    height: 25.h,
+                  Container(
+                    margin: EdgeInsets.only(left: 24.w, right: 22.h),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(width: 260.w, child: MaintenanceMenu()),
+                          SizedBox(
+                            height: 25.h,
+                          ),
+                          describeYourProblem(context),
+                          SizedBox(
+                            height: 25.h,
+                          ),
+                        ]),
                   ),
-                  
-                ]),
+                  SelectTiming(),
+                ],
               ),
-               SelectTiming(),
-            ],
-          ),
-          Container(
-            margin: EdgeInsets.only(bottom: 20.h),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 314.w,
-                  height: 48.h,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(16.sp)),
-                    color: const Color(0xFF22A8B9),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Submit Request',
-                      style: TextStyle(
-                        fontSize: 17.sp,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
+            ),
+            Container(
+              margin: EdgeInsets.only(bottom: 20.h),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 314.w,
+                    height: 48.h,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(16.sp)),
+                      color: const Color(0xFF22A8B9),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Submit Request',
+                        style: TextStyle(
+                          fontSize: 17.sp,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                  ),
-                )
-              ],
-
-            ),
-          )
-        ],
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
 
   TextField describeYourProblem(BuildContext context) {
     return TextField(
-          maxLines: 7,
-          decoration: InputDecoration(
-            hintText: 'Describe your problem...',
-            hintStyle: Theme.of(context).textTheme.subtitle1!.apply(
-                  color: Theme.of(context).dividerColor,
-                ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10.r),
-              borderSide: const BorderSide(
-                color: Color(0xffE3E3E3),
-              ),
+      maxLines: 7,
+      decoration: InputDecoration(
+        hintText: 'Describe your problem...',
+        hintStyle: Theme.of(context).textTheme.subtitle1!.apply(
+              color: Theme.of(context).dividerColor,
             ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10.r),
-              borderSide: const BorderSide(
-                color: Color(0xffE3E3E3),
-              ),
-            ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.r),
+          borderSide: const BorderSide(
+            color: Color(0xffE3E3E3),
           ),
-        );
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.r),
+          borderSide: const BorderSide(
+            color: Color(0xffE3E3E3),
+          ),
+        ),
+      ),
+    );
   }
 }
-
-
 
 class MaintenanceMenu extends StatefulWidget {
   MaintenanceMenu({Key? key}) : super(key: key);

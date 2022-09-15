@@ -2,6 +2,7 @@ import 'package:college_hub/Screens/authentication/login_page.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class SplashScreenWidget extends StatelessWidget {
@@ -116,10 +117,7 @@ class SplashScreenWidget extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => LoginPage()),
-              );
+              Get.to(LoginPage());
             },
             child: Padding(
               padding: EdgeInsets.all(25.0.sp),

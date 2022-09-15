@@ -4,6 +4,7 @@ import 'package:after_layout/after_layout.dart';
 import 'package:college_hub/Screens/authentication/login_page.dart';
 import 'package:college_hub/Screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashMain extends StatefulWidget {
@@ -19,12 +20,10 @@ class SplashState extends State<SplashMain> with AfterLayoutMixin<SplashMain> {
     bool seen = (prefs.getBool('seen') ?? false);
 
     if (seen) {
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => LoginPage()));
+      Get.to(LoginPage());
     } else {
       await prefs.setBool('seen', true);
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const Splash1()));
+      Get.to(const Splash1());
     }
   }
 

@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 class User {
   final String enrollmentNo;
@@ -8,7 +7,7 @@ class User {
   final String password;
   final int age;
   final bool gender;
-  final Long phoneNo;
+  final int phoneNo;
 
   User({
     required this.enrollmentNo,
@@ -21,9 +20,9 @@ class User {
     required this.phoneNo,
   });
 
-factory User.fromJson(Map<String, dynamic> response) {
+  factory User.fromJson(Map<String, dynamic> response) {
     return User(
-     enrollmentNo: response['enrollment_no'],
+      enrollmentNo: response['enrollment_no'],
       firstName: response['first_name'],
       secondName: response['second_name'],
       email: response['email'],
@@ -31,20 +30,19 @@ factory User.fromJson(Map<String, dynamic> response) {
       age: response['age'],
       gender: response['gender'],
       phoneNo: response['phone_no'],
-        );
+    );
   }
 
   Map<String, dynamic> toMap() {
     return {
-     'enrollment_no':enrollmentNo,
-     'first_name':firstName,
-     'second_name':secondName,
-      'email':email,
-      'password':password,
-      'age':age,
-      'gender':gender,
-      'phoneNo':phoneNo,
+      'enrollment_no': enrollmentNo,
+      'first_name': firstName,
+      'second_name': secondName,
+      'email': email,
+      'password': password,
+      'age': age,
+      'gender': gender,
+      'phoneNo': phoneNo,
     };
   }
-
 }

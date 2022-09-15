@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-
 class chaiOk extends StatelessWidget {
   const chaiOk({Key? key}) : super(key: key);
 
@@ -14,28 +13,27 @@ class chaiOk extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-        'Chai Ok',
-        style: Theme.of(context).textTheme.headline4,
-      ),
-        leading: IconButton(
-        onPressed: () {
-          Get.back();
-        },
-        icon: Icon(
-          Icons.arrow_back_ios_new_rounded,
-          color: Colors.black,
-          size: 18.sp,
+          'Chai Ok',
+          style: Theme.of(context).textTheme.headline4,
         ),
-      ),
-        elevation: 5,
+        leading: IconButton(
+          onPressed: () {
+            Get.back();
+          },
+          icon: Icon(
+            Icons.arrow_back_ios_new_rounded,
+            color: Colors.black,
+            size: 18.sp,
+          ),
+        ),
+        elevation: 0,
         backgroundColor: Colors.white,
-        
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.start,
-          children:  [
+          children: [
             Container(
               height: 271.h,
               width: 350.w,
@@ -50,7 +48,7 @@ class chaiOk extends StatelessWidget {
               
             ),
             Padding(
-              padding: EdgeInsets.only(left:25.sp,right: 25.sp),
+              padding: EdgeInsets.only(left: 25.sp, right: 25.sp),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -132,9 +130,6 @@ class chaiOk extends StatelessWidget {
                 ],
               ),
             ),
-            
-            
-        
           ],
         ),
       ),

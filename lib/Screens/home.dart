@@ -18,23 +18,26 @@ class Home extends StatelessWidget {
     'image 49.png',
     'image 50.png',
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-          margin: EdgeInsets.only(top: 50.h),
-          color: Theme.of(context).backgroundColor,
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              // ignore: prefer_const_literals_to_create_immutables
-              children: [
-                const Top(),
-                const BannerCarousel(),
-                Categories(categories: categories)
-              ],
-            ),
-          )),
+      body: SafeArea(
+        child: Container(
+            margin: EdgeInsets.only(top: 50.h),
+            color: Theme.of(context).backgroundColor,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  const Top(),
+                  const BannerCarousel(),
+                  Categories(categories: categories)
+                ],
+              ),
+            )),
+      ),
     );
   }
 }

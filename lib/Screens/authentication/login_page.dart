@@ -1,6 +1,8 @@
-import 'package:college_hub/Screens/food_outlets/kathi.dart';
+import 'package:college_hub/Screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+
 
 import '../../widgets/button.dart';
 import '../../widgets/loginpage_header.dart';
@@ -19,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.only(bottom: 30),
+        padding: EdgeInsets.only(bottom: 30.h),
         child: Column(
           children: <Widget>[
             HeaderContainer("Login"),
@@ -27,54 +29,56 @@ class _LoginPageState extends State<LoginPage> {
               flex: 1,
               child: Container(
                 margin: EdgeInsets.only(left: 20.sp, right: 20.sp, top: 30.sp),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: <Widget>[
-                    _textInput(
-                        hint: "Enter your Institute ID",
-                        icon: Icons.email,
-                        obscuretext: false),
-                    _textInput(
-                        hint: "Password",
-                        icon: Icons.vpn_key,
-                        obscuretext: true),
-                    Container(
-                      margin: EdgeInsets.only(top: 10.sp),
-                      alignment: Alignment.centerRight,
-                      child: const Text(
-                        "Forgot Password?",
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: <Widget>[
+                      _textInput(
+                          hint: "Enter your Institute ID",
+                          icon: Icons.email,
+                          obscuretext: false),
+                      _textInput(
+                          hint: "Password",
+                          icon: Icons.vpn_key,
+                          obscuretext: true),
+                      Container(
+                        margin: EdgeInsets.only(top: 10.sp),
+                        alignment: Alignment.centerRight,
+                        child: const Text(
+                          "Forgot Password?",
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 50.h,
-                    ),
-                    Center(
-                      child: ButtonWidget(
-                        onClick: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => const Kathi()));
-                        },
-                        btnText: "LOGIN",
+
+                      SizedBox(
+                        height: 50.h,
                       ),
-                    ),
-                    SizedBox(
-                      height: 30.h,
-                    ),
-                    RichText(
-                      text: TextSpan(children: [
-                        TextSpan(
-                            text: "Don't have an account ? ",
-                            style: Theme.of(context).textTheme.bodyText1),
-                        TextSpan(
-                            text: "Registor",
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyText1!
-                                .copyWith(
-                                    color: Theme.of(context).highlightColor)),
-                      ]),
-                    ),
-                  ],
+                      Center(
+                        child: ButtonWidget(
+                          onClick: () {
+                            Get.to(Home());
+                          },
+                          btnText: "LOGIN",
+                        ),
+                      ),
+                      SizedBox(
+                        height: 30.h,
+                      ),
+                      RichText(
+                        text: TextSpan(children: [
+                          TextSpan(
+                              text: "Don't have an account ? ",
+                              style: Theme.of(context).textTheme.bodyText1),
+                          TextSpan(
+                              text: "Registor",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyText1!
+                                  .copyWith(
+                                      color: Theme.of(context).highlightColor)),
+                        ]),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             )

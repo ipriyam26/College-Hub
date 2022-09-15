@@ -1,10 +1,15 @@
+
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+
 class Laundry extends StatelessWidget {
   const Laundry({Key? key}) : super(key: key);
 
+  // LaundaryController laundaryController = Get.put(LaundaryController());
   @override
   Widget build(BuildContext context) {
     var appBarMain = AppBar(
@@ -39,7 +44,7 @@ class Laundry extends StatelessWidget {
                   LabelField(
                     label: "Enrollment Number",
                     width: 345.w,
-                    data: "E20CSE479",
+                    data: "dfsdf",
                   ),
                   SizedBox(
                     height: 10.h,
@@ -59,39 +64,73 @@ class Laundry extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 16.h,
+              height: 30.h,
             ),
-            SizedBox(
-              height: 560.h,
-              child: Container(
-                padding: EdgeInsets.symmetric(vertical: 26.h,horizontal: 20.w),
-                decoration: BoxDecoration(
-                    color: Theme.of(context).highlightColor,
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(30.r),
-                        topRight: Radius.circular(30.r))),
-                child: Column(children:  [
-                  const LaundryList(),
-                  const LaundryList(),
-                  const LaundryList(),
-                  const LaundryList(),
-                  const LaundryList(),
-                  const LaundryList(),
-                  Container(
-                     margin: EdgeInsets.only(top: 22.h),
-                    child: ElevatedButton(
-                      // style: ,
-                      onPressed: null, child: Container(
-                      height: 48.h,
-                      width: 314.w,
-                     
-                      alignment: Alignment.center,
-                      child: Text("Generate Slip",
-                      
-                      style: Theme.of(context).textTheme.bodyText1,
-                      ))),
-                  )
-                ]),
+
+            Expanded(
+              child: Align(
+                alignment: FractionalOffset.bottomCenter,
+                child: SizedBox(
+                  height: 560.h,
+                  child: Container(
+                    padding:
+                        EdgeInsets.symmetric(vertical: 26.h, horizontal: 20.w),
+                    decoration: BoxDecoration(
+                        color: Theme.of(context).highlightColor,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30.r),
+                            topRight: Radius.circular(30.r))),
+                    child: Column(children: [
+                      const LaundryList(
+                        itemName: "T-Shirt",
+                        iconUrl: "assets/tshirt.png",
+                      ),
+                      const LaundryList(
+                        itemName: "Shorts",
+                        iconUrl: "assets/003-pants.png",
+                      ),
+                      const LaundryList(
+                        itemName: "Cardigans",
+                        iconUrl: "assets/004-cardigan.png",
+                      ),
+                      const LaundryList(
+                        itemName: "Dresses",
+                        iconUrl: "assets/005-dress.png",
+                      ),
+                      const LaundryList(
+                        itemName: "Home",
+                        iconUrl: "assets/Home.png",
+                      ),
+                      const LaundryList(
+                        itemName: "Others",
+                        iconUrl: "assets/007-tie.png",
+                      ),
+                      Expanded(
+                        child: Align(
+                          alignment: FractionalOffset.bottomCenter,
+                          child: Container(
+                            margin: EdgeInsets.only(top: 20.h),
+                            child: ElevatedButton(
+                                // style: ,
+                                onPressed: () {},
+                                child: Container(
+                                    height: 48.h,
+                                    width: 314.w,
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      "Generate Slip",
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyText1!
+                                          .copyWith(color: Colors.white),
+                                    ))),
+                          ),
+                        ),
+                      )
+                    ]),
+                  ),
+                ),
+
               ),
             )
           ],
@@ -99,10 +138,26 @@ class Laundry extends StatelessWidget {
   }
 }
 
-class LaundryList extends StatelessWidget {
-  const LaundryList({
-    Key? key,
-  }) : super(key: key);
+class LaundryList extends StatefulWidget {
+  const LaundryList({Key? key, required this.itemName, required this.iconUrl})
+      : super(key: key);
+
+  final String itemName;
+  final String iconUrl;
+  @override
+  State<LaundryList> createState() => _LaundryListState();
+}
+
+class _LaundryListState extends State<LaundryList> {
+  var noOfbag = 0;
+
+  void addValue() {
+    setState(() => noOfbag += 1);
+  }
+
+  void minValue() {
+    setState(() => noOfbag -= 1);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -111,63 +166,112 @@ class LaundryList extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(30.r),
         child: Container(
-          
           padding: EdgeInsets.symmetric(horizontal: 20.w),
-          
           color: Colors.white,
           height: 60.h,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-      
-            Row(
-              children: [
-                const FlutterLogo(),
-                SizedBox(width: 17.w,),
-                 Text(
-                  "Laundry Bag 1",
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyText1!
-                      .apply(color: Colors.black),
-                ),
-              ],
-            ),
-             Row(
-              children: [
-                ClipOval(
-                  child: Container(
-                    height: 20.h,
-                    width: 20.w,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        color: Theme.of(context).cardColor ,
-                        borderRadius: BorderRadius.circular(5.r)),
-                    child:Icon(Icons.remove,color: Colors.black,size: 10.sp,),
+              Row(
+                children: [
+
+                  Image.asset(widget.iconUrl),
+
+                  SizedBox(
+                    width: 17.w,
                   ),
-                ),  
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 8.w),
-                  child: Text("5",
-                  style: Theme.of(context)
-                    .textTheme
-                    .bodyText1!
-                    .apply(color: Colors.black, fontWeightDelta: 700),
+                  Text(
+
+                    widget.itemName,
+
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyText1!
+                        .apply(color: Colors.black),
                   ),
-                ),
-                ClipOval(
-                  child: Container(
-                    height: 20.h,
-                    width: 20.w,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        color: Theme.of(context).cardColor ,
-                        borderRadius: BorderRadius.circular(5.r)),
-                    child:Icon(Icons.add,color: Colors.black,size: 10.sp,),
+                ],
+              ),
+              Row(
+                children: [
+                  ClipOval(
+                    child: Container(
+                      height: 20.h,
+                      width: 20.w,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                          color: Theme.of(context).cardColor,
+                          borderRadius: BorderRadius.circular(5.r)),
+
+                      child: GestureDetector(
+                        onTap: (() {
+                          minValue();
+                        }),
+                        child: Icon(
+                          Icons.remove,
+                          color: Colors.black,
+                          size: 10.sp,
+                        ),
+
+                      ),
+                    ),
                   ),
-                ),
-              ],
-            ),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 8.w),
+                    child: Text(
+
+                      "$noOfbag",
+
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyText1!
+                          .apply(color: Colors.black, fontWeightDelta: 700),
+                    ),
+                  ),
+
+                  noOfbag == 10
+                      ? ClipOval(
+                          child: Container(
+                            height: 20.h,
+                            width: 20.w,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                                color: Theme.of(context).cardColor,
+                                borderRadius: BorderRadius.circular(5.r)),
+                            child: GestureDetector(
+                              onTap: (() {
+                                showcleaningpopup(context);
+                              }),
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.black,
+                                size: 10.sp,
+                              ),
+                            ),
+                          ),
+                        )
+                      : ClipOval(
+                          child: Container(
+                            height: 20.h,
+                            width: 20.w,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                                color: Theme.of(context).cardColor,
+                                borderRadius: BorderRadius.circular(5.r)),
+                            child: GestureDetector(
+                              onTap: (() {
+                                addValue();
+                              }),
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.black,
+                                size: 10.sp,
+                              ),
+                            ),
+                          ),
+                        ),
+
+                ],
+              ),
             ],
           ),
         ),
@@ -211,4 +315,82 @@ class LabelField extends StatelessWidget {
       ],
     );
   }
+}
+
+showcleaningpopup(context) {
+  return showDialog(
+    context: context,
+    builder: (context) {
+      return Center(
+        child: Material(
+          type: MaterialType.transparency,
+          child: Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Theme.of(context).backgroundColor),
+            padding: EdgeInsets.all(15.sp),
+            height: 200.h,
+            width: 200.w,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  height: 30.h,
+                  width: 30.w,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(7.sp)),
+                    color: Colors.red,
+                  ),
+                  child: const Icon(
+                    Icons.cancel_outlined,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                Text(
+                  'Sorry no more than 10 clothes \ncan be selected',
+                  textAlign: TextAlign.justify,
+                  style: Theme.of(context).textTheme.headline5,
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                InkWell(
+                  onTap: () {
+                    Get.back();
+                  },
+                  child: Container(
+                    width: 314.w,
+                    height: 40.h,
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                          colors: [
+                            Color(0xff22ABB9),
+                            Color(0xff22ABB9),
+                          ],
+                          end: Alignment.centerLeft,
+                          begin: Alignment.centerRight),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                    ),
+                    alignment: Alignment.center,
+                    child: Text(
+                      "OK",
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline5!
+                          .copyWith(color: Theme.of(context).backgroundColor),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    },
+  );
 }

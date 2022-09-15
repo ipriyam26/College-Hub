@@ -16,8 +16,22 @@ class Categories extends StatelessWidget {
     required this.categories,
   }) : super(key: key);
 
+  // final List<VoidCallback> pages = [
+  //   Laundry,
+  //   Laundry,
+  //   Laundry,
+  //   Laundry,
+  //   Laundry,
+  //   Laundry,
+  //   Laundry,
+  //   Laundry,
+  //   Laundry,
+  //   Laundry,
+  //   Laundry,
+  // ];
+
+  final List<int> cat = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
   final List<String> categories;
-final List<int> cat = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +57,7 @@ final List<int> cat = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
               onTap: (){
               print("Clicked");
               if(index == 0){
-                Get.to(() => const Laundry());
+                Get.to(() =>  const Laundry());
               }
               else if(index==1){
                 // Get.to(() =>  Cleaning());
@@ -94,6 +108,7 @@ class Category extends StatelessWidget {
     Key? key,
     required this.image,
   }) : super(key: key);
+
   final String image;
   @override
   Widget build(BuildContext context) {

@@ -36,14 +36,6 @@ class _CarPoolState extends State<CarPool> {
         ),
         elevation: 5,
         backgroundColor: Colors.white,
-        // title: Text(
-        //   'Food Outlets',
-        //   style: TextStyle(
-        //     color: Colors.black,
-        //     fontWeight: FontWeight.bold,
-        //     fontSize: 16.sp
-        //   ),
-        // ),
       ),
       body: Container(
         child: Column(
@@ -100,17 +92,16 @@ showDialogFunc(context, String name, String destination, String time,
           type: MaterialType.transparency,
           child: Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Colors.white,
-            ),
+                borderRadius: BorderRadius.circular(10),
+                color: Theme.of(context).backgroundColor),
             padding: EdgeInsets.all(15.sp),
             height: 360.h,
             width: 300.w,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: 10.h,
                 ),
                 Text(
                   "CAR POOL",

@@ -29,28 +29,4 @@ class Cleaning {
         'status': status,
         'posted_on': postedOn,
       };
-
-}
-
-class CleaningStatus{
-
-  final String id;
-  final String status;
-  final String postedOn;
-
-  CleaningStatus({
-    required this.id,
-    required this.status,
-    required this.postedOn,
-  });
-
-  factory CleaningStatus.fromJson(Map<String, dynamic> json) {
-    return CleaningStatus(
-      id: json['id'],
-      status: json['status'],
-      postedOn: json['posted_on'],
-    );
-  }
-  
-
 }
