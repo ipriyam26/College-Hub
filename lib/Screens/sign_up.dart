@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../widgets/button.dart';
-import 'laundry.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -68,13 +67,13 @@ class SignUp extends StatelessWidget {
                           value: isChecked,
                           onChanged: (bool? value) {},
                         ),
-                        Text('Hostels'),
+                        const Text('Hostels'),
                         Checkbox(
                           checkColor: Colors.white,
                           value: isChecked,
                           onChanged: (bool? value) {},
                         ),
-                        Text(
+                        const Text(
                           'Day Scholars',
                         ),
                       ],
@@ -99,7 +98,7 @@ class SignUp extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Room Number'),
+                            const Text('Room Number'),
                             SizedBox(
                               height: 10.h,
                             ),
@@ -123,7 +122,7 @@ class SignUp extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Room Number'),
+                            const Text('Room Number'),
                             SizedBox(
                               height: 10.h,
                             ),
@@ -152,7 +151,7 @@ class SignUp extends StatelessWidget {
                     input_label(title: 'Laundry Bag Number', hint: '812'),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: const [
                         Text.rich(
                           TextSpan(
                             children: [
@@ -168,7 +167,7 @@ class SignUp extends StatelessWidget {
                     SizedBox(
                       height: 20.h,
                     ),
-                    button(
+                    const button(
                       text: "Sign Up",
                     ),
                   ],
@@ -197,7 +196,7 @@ class input_label extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 12.sp),
         child: Text(
           title,
-          style: TextStyle(color: Colors.grey),
+          style: const TextStyle(color: Colors.grey),
         ),
       ),
       Padding(

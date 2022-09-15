@@ -18,9 +18,4 @@ class UserController extends GetxController {
     super.onInit();
   }
 
-  @override
-  void onReady() async {
-    // await updateUser();
-    super.onReady();
-  }
 }

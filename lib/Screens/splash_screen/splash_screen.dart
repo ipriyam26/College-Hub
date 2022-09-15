@@ -9,7 +9,7 @@ class Splash1 extends StatefulWidget {
 }
 
 class _Splash1State extends State<Splash1> {
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +17,7 @@ class _Splash1State extends State<Splash1> {
       children: [
         PageView(
           controller: _controller,
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           children: [
             SplashScreenWidget(
               quote: '''Easy service \n booking & scheduling

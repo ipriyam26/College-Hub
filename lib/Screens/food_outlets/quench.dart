@@ -40,7 +40,7 @@ class Quench extends StatelessWidget {
               height: 271.h,
               width: 350.w,
               decoration: BoxDecoration(
-                image: DecorationImage(
+                image: const DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage(
                   "assets/quench.png",
@@ -69,7 +69,7 @@ class Quench extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(name: "Maharaja Burger", imageurl: "assets/kathi.png", price: "60", bestseller: true, Veg: true,category: "In Bread",),
+              const FoodListBar(name: "Maharaja Burger", imageurl: "assets/kathi.png", price: "60", bestseller: true, Veg: true,category: "In Bread",),
               SizedBox(
                 height: 15.h,
               ),
@@ -77,13 +77,13 @@ class Quench extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(name: "Paneer Wrap", imageurl: "assets/kathi.png", price: "120", bestseller: true, Veg: false,category: "In Bread",),
+              const FoodListBar(name: "Paneer Wrap", imageurl: "assets/kathi.png", price: "120", bestseller: true, Veg: false,category: "In Bread",),
 
               SizedBox(
                 height: 10.h,
               ),
 
-              FoodListBar(name: "Peri Peri Fries", imageurl: "assets/kathi.png", price: "65", bestseller: true, Veg: true,category: "North Indian",),
+              const FoodListBar(name: "Peri Peri Fries", imageurl: "assets/kathi.png", price: "65", bestseller: true, Veg: true,category: "North Indian",),
 
               SizedBox(
                 height: 15.h,
@@ -95,25 +95,25 @@ class Quench extends StatelessWidget {
                 height: 10.h,
               ),
 
-              FoodListBar(name: "Aloo Paratha", imageurl: "assets/kathi.png", price: "65", bestseller: true, Veg: true,category:"" ,),
+              const FoodListBar(name: "Aloo Paratha", imageurl: "assets/kathi.png", price: "65", bestseller: true, Veg: true,category:"" ,),
 
               SizedBox(
                 height: 10.h,
               ),
 
-              FoodListBar(name: "Paneer Wrap", imageurl: "assets/kathi.png", price: "70", bestseller: false, Veg: true,category:"" ,),
+              const FoodListBar(name: "Paneer Wrap", imageurl: "assets/kathi.png", price: "70", bestseller: false, Veg: true,category:"" ,),
 
               SizedBox(
                 height: 10.h,
               ),
 
-              FoodListBar(name: "Vegetable Wrap", imageurl: "assets/kathi.png", price: "65", bestseller: false, Veg: true,category:"" ,),
+              const FoodListBar(name: "Vegetable Wrap", imageurl: "assets/kathi.png", price: "65", bestseller: false, Veg: true,category:"" ,),
 
               SizedBox(
                 height: 10.h,
               ),
 
-              FoodListBar(name: "Aloo Tikki Wrap", imageurl: "assets/kathi.png", price: "65", bestseller: false, Veg: true,category:"" ,),
+              const FoodListBar(name: "Aloo Tikki Wrap", imageurl: "assets/kathi.png", price: "65", bestseller: false, Veg: true,category:"" ,),
 
               SizedBox(
                 height: 15.h,
@@ -122,17 +122,17 @@ class Quench extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(name: "Fries With Cheese ", imageurl: "assets/kathi.png", price: "60", bestseller: true, Veg: true,category:"" ,),
+              const FoodListBar(name: "Fries With Cheese ", imageurl: "assets/kathi.png", price: "60", bestseller: true, Veg: true,category:"" ,),
 
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(name: "Chole Kulche", imageurl: "assets/kathi.png", price: "60", bestseller: true, Veg: true,category:"" ,),
+              const FoodListBar(name: "Chole Kulche", imageurl: "assets/kathi.png", price: "60", bestseller: true, Veg: true,category:"" ,),
 
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(name: "Pav Bhaji", imageurl: "assets/kathi.png", price: "60", bestseller: true, Veg: true,category:"" ,),
+              const FoodListBar(name: "Pav Bhaji", imageurl: "assets/kathi.png", price: "60", bestseller: true, Veg: true,category:"" ,),
 
               
                 ],

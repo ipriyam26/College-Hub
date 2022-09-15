@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-import 'cleaning.dart';
 
 class Appointment extends StatelessWidget {
   const Appointment({Key? key}) : super(key: key);

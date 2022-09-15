@@ -70,18 +70,20 @@ class FoodListBar extends StatelessWidget {
                     ],
                   ],
                 ),
-                if (this.category != "") ...[
+                if (category != "") ...[
                   Text(
-                    this.category,
+                    category,
                     style: Theme.of(context).textTheme.subtitle1,
                   ),
                 ],
                 Text(
-                  this.name,
-                  style: Theme.of(context).textTheme.button,
+                  name,
+                  style: Theme.of(context).textTheme.headline6!.apply(
+                    color: Theme.of(context).dividerColor,
+                  ),
                 ),
                 Text(
-                  "₹" + this.price,
+                  "₹$price",
                   style: Theme.of(context).textTheme.caption,
                 ),
                 ClipOval(
@@ -106,7 +108,7 @@ class FoodListBar extends StatelessWidget {
               height: 100.h,
               width: 90.w,
               decoration: BoxDecoration(
-                  image: DecorationImage(
+                  image: const DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
                         "assets/kathi.png",

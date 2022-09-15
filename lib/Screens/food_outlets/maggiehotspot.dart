@@ -1,5 +1,3 @@
-import 'package:college_hub/Screens/food_outlets/kathi.dart';
-import 'package:college_hub/widgets/outlet_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -39,6 +37,7 @@ class maggieHotspot extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
+
               Card(
                 elevation: 0,
                 shadowColor: Theme.of(context).disabledColor,
@@ -51,7 +50,7 @@ class maggieHotspot extends StatelessWidget {
                     Stack(
                       children: [
                         Ink.image(
-                          image: AssetImage(
+                          image: const AssetImage(
                             "assets/maggiehotspot.png",
                           ),
                           colorFilter: ColorFilter.mode(
@@ -91,7 +90,7 @@ class maggieHotspot extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(
+              const FoodListBar(
                 name: "Aloo Paratha",
                 imageurl: "assets/maggiehotspot.png",
                 price: "60",
@@ -110,7 +109,7 @@ class maggieHotspot extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(
+              const FoodListBar(
                 name: "Fried Chicken",
                 imageurl: "assets/food_items/friedchicken.png",
                 price: "120",
@@ -121,7 +120,7 @@ class maggieHotspot extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(
+              const FoodListBar(
                 name: "Chole Bhature",
                 imageurl: "assets/food_items/cholebhature.png",
                 price: "65",
@@ -140,7 +139,7 @@ class maggieHotspot extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(
+              const FoodListBar(
                 name: "Aloo Paratha",
                 imageurl: "assets/food_items/aloopratha.png",
                 price: "65",
@@ -151,7 +150,7 @@ class maggieHotspot extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(
+              const FoodListBar(
                 name: "Mixed Paratha",
                 imageurl: "assets/food_items/cholebhature.png",
                 price: "70",
@@ -162,7 +161,7 @@ class maggieHotspot extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(
+              const FoodListBar(
                 name: "Paneer Paratha",
                 imageurl: "assets/food_items/paneerpratha.png",
                 price: "65",
@@ -181,7 +180,7 @@ class maggieHotspot extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(
+              const FoodListBar(
                 name: "Chole Bhature",
                 imageurl: "assets/food_items/cholebhature.png",
                 price: "60",
@@ -192,7 +191,7 @@ class maggieHotspot extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(
+              const FoodListBar(
                 name: "Chole Kulche",
                 imageurl: "assets/food_items/cholekulche.png",
                 price: "60",
@@ -203,7 +202,7 @@ class maggieHotspot extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              FoodListBar(
+              const FoodListBar(
                 name: "Pav Bhaji",
                 imageurl: "assets/food_items/paubhaji.png",
                 price: "60",

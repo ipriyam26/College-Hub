@@ -1,6 +1,4 @@
-import 'package:college_hub/Screens/food_outlets/kathi.dart';
 import 'package:college_hub/Screens/home.dart';
-import 'package:college_hub/Screens/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -46,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
                       Container(
                         margin: EdgeInsets.only(top: 10.sp),
                         alignment: Alignment.centerRight,
-                        child: Text(
+                        child: const Text(
                           "Forgot Password?",
                         ),
                       ),
@@ -96,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
       height: 47.h,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.black, style: BorderStyle.solid),
-        borderRadius: BorderRadius.all(Radius.circular(20)),
+        borderRadius: const BorderRadius.all(Radius.circular(20)),
         color: Colors.white,
       ),
       padding: EdgeInsets.only(left: 10.sp),

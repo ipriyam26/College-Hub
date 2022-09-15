@@ -1,17 +1,13 @@
 
-import 'package:college_hub/widgets/cleaning_popup.dart';
 
-import 'package:college_hub/controllers/laundaryController.dart';
-import 'package:college_hub/controllers/user_controller.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import 'car_pool.dart';
 
 class Laundry extends StatelessWidget {
-  Laundry({Key? key}) : super(key: key);
+  const Laundry({Key? key}) : super(key: key);
 
   // LaundaryController laundaryController = Get.put(LaundaryController());
   @override
@@ -368,7 +364,7 @@ showcleaningpopup(context) {
                   child: Container(
                     width: 314.w,
                     height: 40.h,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       gradient: LinearGradient(
                           colors: [
                             Color(0xff22ABB9),

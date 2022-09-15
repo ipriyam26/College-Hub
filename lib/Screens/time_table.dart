@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:intl/intl.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'dart:math' as math;
 
@@ -83,9 +82,9 @@ class TimeTable extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      TimeBar(),
-                      CenterLine(),
-                      Container(
+                      const TimeBar(),
+                      const CenterLine(),
+                      SizedBox(
                         height: 800.h,
                         width: 300.w,
                         // color: Colors.pink,
@@ -178,9 +177,9 @@ class Display extends StatelessWidget {
               color: Colors.transparent,
             ),
             margin: EdgeInsets.only(top: 10.h),
-            child: Text(" "),
             height: 31.h,
             width: 271.w,
+            child: const Text(" "),
           )
         : Container(
             decoration: BoxDecoration(

@@ -50,7 +50,7 @@ class ButtonWidget extends StatelessWidget {
       child: Container(
         width: 314.w,
         height: 55.h,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(colors: [
             Color(0xff22ABB9),
             Color(0xff22ABB9),

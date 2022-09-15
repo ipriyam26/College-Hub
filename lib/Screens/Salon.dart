@@ -60,13 +60,23 @@ class salon_item extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(18.0),
+      padding: const EdgeInsets.all(18.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
             height: 220.h,
             width: 160.w,
+            decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: const [
+                  BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 3,
+                      spreadRadius: 1,
+                      offset: Offset(0, 0)),
+                ],
+                borderRadius: BorderRadius.all(Radius.circular(6.sp))),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -85,15 +95,15 @@ class salon_item extends StatelessWidget {
                         top: 13.h,
                         child: Container(
                           width: 26.w,
-                          child: Icon(
-                            Icons.favorite_outline,
-                            color: Colors.black,
-                          ),
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             color: Colors.white,
                           ),
                           height: 26.w,
+                          child: const Icon(
+                            Icons.favorite_outline,
+                            color: Colors.black,
+                          ),
                         ))
                   ],
                 ),
@@ -106,14 +116,14 @@ class salon_item extends StatelessWidget {
                     children: [
                       Text(
                         type,
-                        style: TextStyle(color: Colors.black),
+                        style: const TextStyle(color: Colors.black),
                       ),
                       SizedBox(
                         height: 8.h,
                       ),
                       Text(
                         mrp,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.black),
                       ),
                     ],
@@ -121,16 +131,6 @@ class salon_item extends StatelessWidget {
                 )
               ],
             ),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.grey,
-                      blurRadius: 3,
-                      spreadRadius: 1,
-                      offset: Offset(0, 0)),
-                ],
-                borderRadius: BorderRadius.all(Radius.circular(6.sp))),
           ),
           SizedBox(
             width: 20.w,
@@ -138,6 +138,16 @@ class salon_item extends StatelessWidget {
           Container(
             height: 220.h,
             width: 160.w,
+            decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: const [
+                  BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 3,
+                      spreadRadius: 1,
+                      offset: Offset(0, 0)),
+                ],
+                borderRadius: BorderRadius.all(Radius.circular(6.sp))),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -146,7 +156,7 @@ class salon_item extends StatelessWidget {
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(6.sp)),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               fit: BoxFit.fill,
                               image: AssetImage('assets/haircut.png'))),
                       height: 160.h,
@@ -157,15 +167,15 @@ class salon_item extends StatelessWidget {
                         top: 13.h,
                         child: Container(
                           width: 26.w,
-                          child: Icon(
-                            Icons.favorite_outline,
-                            color: Colors.black,
-                          ),
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             color: Colors.white,
                           ),
                           height: 26.w,
+                          child: const Icon(
+                            Icons.favorite_outline,
+                            color: Colors.black,
+                          ),
                         ))
                   ],
                 ),
@@ -176,14 +186,14 @@ class salon_item extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 4.sp),
                   child: Column(
                     children: [
-                      Text(
+                      const Text(
                         'Hair cut',
                         style: TextStyle(color: Colors.black),
                       ),
                       SizedBox(
                         height: 8.h,
                       ),
-                      Text(
+                      const Text(
                         'Rs.400',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.black),
@@ -193,16 +203,6 @@ class salon_item extends StatelessWidget {
                 )
               ],
             ),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.grey,
-                      blurRadius: 3,
-                      spreadRadius: 1,
-                      offset: Offset(0, 0)),
-                ],
-                borderRadius: BorderRadius.all(Radius.circular(6.sp))),
           ),
         ],
       ),

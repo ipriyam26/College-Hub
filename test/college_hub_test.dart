@@ -5,20 +5,24 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:college_hub/main.dart';
 import 'package:get/get.dart';
 
 void main() {
-  testWidgets(
-    'Get material App',
-    (WidgetTester tester) async {
-      // Build our app and trigger a frame.
-      await tester.pumpWidget(MyApp());
+  testWidgets('Get material App', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(const MyApp());
 
-      expect(find.byType(GetMaterialApp), findsOneWidget);
-    },
-  );
+    expect(find.byType(GetMaterialApp), findsOneWidget);
+  },);
+
+  testWidgets('Get material App', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(const MyApp());
+
+    expect(find.text('Submit Request'), findsNWidgets(11));
+  });
+  
 }

@@ -5,8 +5,8 @@
   },
 
   "editor.defaultFormatter": "Dart-Code.dart-code",
-    "editor.formatOnSave": true,
+  "editor.formatOnSave": true,
 
-  "cSpell.words": ["raleway", "screenutil"]
-
+  "cSpell.words": ["raleway", "screenutil"],
+  "cSpell.ignoreWords": ["prefs"]
 }

@@ -47,7 +47,7 @@ class FoodOutlet extends StatelessWidget {
                 padding: EdgeInsets.all(8.0.sp),
                 child: GestureDetector(
                     onTap: () {
-                      Get.to(Kathi());
+                      Get.to(const Kathi());
                     },
                     child: const outletCard(
                       imageurl: "assets/kathi.png",
@@ -58,7 +58,7 @@ class FoodOutlet extends StatelessWidget {
                 padding: EdgeInsets.all(8.0.sp),
                 child: GestureDetector(
                     onTap: () {
-                      Get.to(maggieHotspot());
+                      Get.to(const maggieHotspot());
                     },
                     child: const outletCard(
                         imageurl: "assets/maggiehotspot.png",
@@ -68,7 +68,7 @@ class FoodOutlet extends StatelessWidget {
                 padding: EdgeInsets.all(8.0.sp),
                 child: GestureDetector(
                     onTap: () {
-                      Get.to(Quench());
+                      Get.to(const Quench());
                     },
                     child: const outletCard(
                         imageurl: "assets/quench.png",
@@ -78,7 +78,7 @@ class FoodOutlet extends StatelessWidget {
                 padding: EdgeInsets.all(8.0.sp),
                 child: GestureDetector(
                     onTap: () {
-                      Get.to(chaiOk());
+                      Get.to(const chaiOk());
                     },
                     child: const outletCard(
                         imageurl: "assets/chaiok.png",

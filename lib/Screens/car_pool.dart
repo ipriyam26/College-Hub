@@ -155,9 +155,7 @@ showDialogFunc(context, String name, String destination, String time,
                           ),
                         ],
                       ),
-                      Spacer(
-                        flex: 1,
-                      ),
+                      const Spacer(),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -251,7 +249,7 @@ showDialogFunc(context, String name, String destination, String time,
                     )
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 InkWell(
                   onTap: () async {
                     await FlutterPhoneDirectCaller.callNumber('+918384055155');
@@ -259,7 +257,7 @@ showDialogFunc(context, String name, String destination, String time,
                   child: Container(
                     width: 314.w,
                     height: 40.h,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       gradient: LinearGradient(
                           colors: [
                             Color(0xff22ABB9),
