@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../models/User.dart';
+import 'package:college_hub/Models/user.dart';
 
 class UserController extends GetxController {
   final user = User(

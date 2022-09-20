@@ -24,7 +24,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-            margin: EdgeInsets.only(top: 50.h),
+            margin: EdgeInsets.only(top: 10.h),
             color: Theme.of(context).backgroundColor,
             child: SingleChildScrollView(
               child: Column(
